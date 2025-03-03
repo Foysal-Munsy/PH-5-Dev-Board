@@ -28,9 +28,9 @@
 
 </head>
 
-<body class="container mx-auto font-poppins">
+<body class="font-poppins bg-red-200 p-4">
     <!-- Header Section -->
-    <header>
+    <header class="container mx-auto ">
         <!-- Nav Bar -->
         <nav>
             <div class="flex items-center bg-white p-3 rounded-lg shadow">
@@ -61,11 +61,11 @@
     </header>
 
     <!-- Main Section -->
-    <main>
+    <main class="container mx-auto ">
 
-        <div class="grid grid-cols-3 gap-3 my-5 border p-4 rounded-lg">
+        <div class="grid grid-cols-3 gap-3 my-5 ">
             <!-- Left Side -->
-            <div class="col-span-2">
+            <div class="col-span-2 bg-white p-3 rounded-lg">
 
                 <!-- Three Cards -->
                 <div class="grid grid-cols-4 gap-2">
@@ -80,16 +80,13 @@
                         </div>
                     </div>
                     <!-- 2nd -->
-                    <div
+                    <a href="blog.html"
                         class="col-span-2 bg-gradient-to-r from-[#3752fd] via-[#6c7ffa] to-[#9ba8f8] rounded-lg text-white flex items-center justify-center space-x-3">
 
                         <img class="border-dashed border w-12 h-12" src="/assets/board.png" alt="Board"
                             class="w-12 h-12">
                         <p class="text-lg font-semibold">Discover Something New Today!</p>
-
-
-
-                    </div>
+                    </a>
                     <!-- 3rd -->
                     <div class="col-span-1 bg-blue-50 flex items-center space-x-3 p-4 rounded-lg">
                         <div class="bg-white p-3 rounded-full">
@@ -184,7 +181,7 @@
                     </div>
                     <!-- 5th Card -->
                     <div class="bg-blue-50 p-4 rounded-lg grid gap-2">
-                        <span class="text-xs bg-white  px-2 py-1 w-1/3 rounded-lg">Google LLC</span>
+                        <span class="text-xs bg-white  px-2 py-1 w-2/5 rounded-lg">Google LLC</span>
                         <h2 class="text-lg font-semibold mt-2">Integrate OpenAI API</h2>
                         <p class="bg-white text-sm text-gray-400 p-4 rounded-lg text-justify">Debug using Chrome
                             DevTools, check for overlapping elements, and ensure onClick works properly
@@ -220,7 +217,19 @@
             </div>
 
             <!-- Right Side -->
-            <div class="bg-red-200">Activity log</div>
+            <div class="bg-white flex flex-col items-center  text-center space-y-3 p-3 rounded-lg shadow-sm ">
+                <!-- Activity Log -->
+
+                <h3 class="text-lg font-medium flex items-center">
+                    <span class="mr-2"><img class="w-4 h-4" src="/assets/activity.png" alt="activity"></span>Activity
+                    Log
+                </h3>
+                <button class="bg-[#3752FD] text-white py-3 px-6 rounded-lg text-xs ">Clear History</button>
+
+                <div id="activity-log"></div>
+
+
+            </div>
         </div>
 
     </main>
