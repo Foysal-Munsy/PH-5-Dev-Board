@@ -37,5 +37,22 @@ for (const btn of completedBtn) {
     // console.log(vall);
     ++vall;
     last.innerHTML = vall;
+    if (val === 0) {
+      alert("Congratulation !!!! You have completed all the task.");
+    }
+
+    let taskTittle = this.closest(".bg-blue-50").querySelector("h2").innerText;
+
+    // console.log(taskTittle);
+    let currentTime = new Date().toLocaleTimeString();
+    let activityLog = document.getElementById("activity-log");
+    let showMessage = document.createElement("div");
+    showMessage.classList.add("border-b", "p-3", "border-gray-200");
+    showMessage.innerText = `You have completed the task "${taskTittle}" at ${currentTime}`;
+    activityLog.appendChild(showMessage);
   });
 }
+// Clear History
+document.getElementById("clear-history").addEventListener("click", function () {
+  document.getElementById("activity-log").innerHTML = "";
+});
